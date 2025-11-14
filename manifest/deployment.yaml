@@ -12,8 +12,10 @@ spec:
       labels:
         app: myapp
     spec:
+      imagePullSecrets:           # ← ADD THIS
+      - name: regcred              # ← ADD THIS
       containers:
       - name: myapp
-        image: kateshubhangi/todo-app:build-25
+        image: kateshubhangi/todo-app:build-7
         ports:
         - containerPort: 80
