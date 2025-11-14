@@ -12,8 +12,7 @@ spec:
       labels:
         app: myapp
     spec:
-      imagePullSecrets:           # ← ADD THIS
-      - name: regcred              # ← ADD THIS
+      # Remove imagePullSecrets section completely
       containers:
       - name: myapp
         image: kateshubhangi/todo-app:build-7
